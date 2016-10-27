@@ -41,7 +41,7 @@ export class Service {
         // TODO (EK): This is where we should look at req.user and see if we
         // can consolidate profiles. We might want to give the developer a hook
         // so that they can control the consolidation strategy.
-        const providerData = Object.assign({}, profile._json, {accessToken});
+        const providerData = Object.assign({}, profile._json, {accessToken}, {refreshToken});
 
         let data = Object.assign({
           [`${options.provider}Id`]: profile.id,
